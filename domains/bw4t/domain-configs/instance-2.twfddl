@@ -1,0 +1,24 @@
+
+problem:valid_generation
+
+projection:
+
+init:15
+at_<agent>_h
+connected_<room>_h
+connected_h_<room>
+in_<block>_r1
+bcol_b1_green
+bcol_b2_red
+bcol_b3_blue
+bcol_b4_red
+bcol_b5_blue
+B<agent> bcol_b1_green
+B<agent> bcol_b2_red
+B<agent> bcol_b3_blue
+B<agent> bcol_b4_red
+B<agent> bcol_b5_blue
+B<agent> at_<agent>_h
+
+goal:1
+in_b1_r4

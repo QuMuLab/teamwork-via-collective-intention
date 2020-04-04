@@ -1,0 +1,70 @@
+
+###################
+
+Propositions:6
+at(<agent>,<loc1>)
+in(<block>,<room>)
+holding(<agent>,<block>)
+lift(<agent>,<colour>)
+connected(<loc1>,<loc2>)
+bcol(<block>,<colour>)
+
+###############
+
+Actions:4
+
+name:move_<agent>_<room>_h
+derived-condition:always
+precondition:3
+willing_<agent>
+at_<agent>_<room>
+connected_<room>_h
+nondet-effects:1
+effects:2
+add:at_<agent>_h
+add:!at_<agent>_<room>
+
+name:move_<agent>_h_<room>
+derived-condition:always
+precondition:3
+willing_<agent>
+at_<agent>_h
+connected_h_<room>
+nondet-effects:1
+effects:12
+add:at_<agent>_<room>
+add:!at_<agent>_h
+add:in_b1_<room> --> B<agent> in_b1_<room>
+add:in_b2_<room> --> B<agent> in_b2_<room>
+add:in_b3_<room> --> B<agent> in_b3_<room>
+add:in_b4_<room> --> B<agent> in_b4_<room>
+add:in_b5_<room> --> B<agent> in_b5_<room>
+add:!in_b1_<room> --> B<agent> !in_b1_<room>
+add:!in_b2_<room> --> B<agent> !in_b2_<room>
+add:!in_b3_<room> --> B<agent> !in_b3_<room>
+add:!in_b4_<room> --> B<agent> !in_b4_<room>
+add:!in_b5_<room> --> B<agent> !in_b5_<room>
+
+name:pick_<agent>_<colour>_<block>_<room>
+derived-condition:at_?_<room>
+precondition:5
+willing_<agent>
+at_<agent>_<room>
+in_<block>_<room>
+bcol_<block>_<colour>
+lift_<agent>_<colour>
+nondet-effects:1
+effects:2
+add:holding_<agent>_<block>
+add:!in_<block>_<room>
+
+name:drop_<agent>_<block>_<room>
+derived-condition:at_?_<room>
+precondition:3
+willing_<agent>
+at_<agent>_<room>
+holding_<agent>_<block>
+nondet-effects:1
+effects:2
+add:!holding_<agent>_<block>
+add:in_<block>_<room>

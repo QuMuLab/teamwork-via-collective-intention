@@ -1,0 +1,33 @@
+
+problem:valid_generation
+
+projection:
+
+init:21
+at_<agent>_h
+connected_<room>_h
+connected_h_<room>
+in_<block>_r1
+lift_<agent>_green
+B<agent> lift_<agent>_green
+bcol_<block>_green
+bcol_b1_red
+bcol_b2_red
+bcol_b3_red
+bcol_b3_blue
+bcol_b4_blue
+bcol_b5_blue
+B<agent> bcol_<block>_green
+B<agent> bcol_b1_red
+B<agent> bcol_b2_red
+B<agent> bcol_b3_red
+B<agent> bcol_b3_blue
+B<agent> bcol_b4_blue
+B<agent> bcol_b5_blue
+B<agent> at_<agent>_h
+
+goal:4
+in_b1_r2
+in_b2_r3
+in_b3_r4
+in_b4_r3

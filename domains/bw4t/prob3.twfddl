@@ -1,0 +1,11 @@
+
+
+Name:BW4T-2
+
+Max-Depth:1
+
+{include:teamwork-configs/teamwork-2.twfddl}
+
+{include:action-theory.twfddl}
+
+{include:domain-configs/instance-2.twfddl}

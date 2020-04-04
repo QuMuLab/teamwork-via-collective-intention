@@ -1,0 +1,10 @@
+Name:<problem name>
+
+# Assume 'friend' means I trust someone and 'enemy' means I do not
+Trust-Friend-Of-Friend:[yes|no] # Trust is transitive
+Trust-Friend-Of-Enemy:[yes|no] # Friends of my enemies are my enemies
+Trust-Enemy-Of-Friend:[yes|no] # Enemies of my friends are my enemies
+Trust-Enemy-Of-Enemy:[yes|no] # Enemies of my enemies are my friends
+Trust-Symmetric:[yes|no] # Should trust be symmetric
+
+Team-Trust:[mutual|no-distrust] # Should the team all be friends or just not have enemies

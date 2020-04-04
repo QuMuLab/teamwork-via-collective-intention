@@ -1,0 +1,65 @@
+
+#######################
+#  Setup the Trust
+###################
+
+Trust-Friend-Of-Friend:yes
+Trust-Friend-Of-Enemy:yes
+Trust-Enemy-Of-Friend:yes
+Trust-Enemy-Of-Enemy:yes
+Trust-Symmetric:no
+
+Team-Trust:no-distrust
+
+Agents:1,2,3,4,5
+
+Trust-Configuration:0
+
+
+#######################
+
+
+# Setup: Agent 1,2,5 should be honestly required. However
+#        1,2,4 works as a team because the conflicting bargains
+#        of agent 2 and 4 can be faked given the belief update
+#        model on the normal action theory.
+
+
+Types:7
+colour:blue,red,green
+agent:1,2,3,4,5
+room:r1,r2,r3,r4
+loc:r1,r2,r3,r4,h
+loc1:r1,r2,r3,r4,h
+loc2:r1,r2,r3,r4,h
+block:b1,b2,b3,b4,b5
+
+Agent:1
+Capabilities:1
+lift_1_green
+Bargain:1
+in_b2_r2
+
+Agent:2
+Capabilities:1
+lift_2_red
+Bargain:1
+in_b3_r3
+
+Agent:3
+Capabilities:1
+lift_3_blue
+Bargain:1
+holding_3_b1
+
+Agent:4
+Capabilities:1
+lift_4_blue
+Bargain:1
+in_b3_r4
+
+Agent:5
+Capabilities:1
+lift_5_blue
+Bargain:1
+in_b4_r3
